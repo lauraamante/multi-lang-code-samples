@@ -1,22 +1,22 @@
-#Testando programa com switchcase
+//Testando programa com switchcase
 
 include <iostream>
 using namespace std;
 
-#soma
+//soma
 float sum (float a, float b) {
   return a + b;
 }
 
-#subtracao
+//subtracao
 float subtraction (float a, float b){
   return a + b;
 }
-#multiplicacao
+//multiplicacao
 float multiply (float a, float b){
   return a * b;
 }
-#divisao
+//divisao
 float divide (float a, float b){
   if (b == 0){
     cout << "Erro. Impossível dividir por zero." << endl;
@@ -25,7 +25,7 @@ float divide (float a, float b){
 return a/b;
 
 }
-#main
+//main
 int main(){
 float x, y, resultado;
 char op;
@@ -40,7 +40,7 @@ cin >> op;
 cout <<"\nDigite o segundo número:\n";
 cin >> y;
 
-
+//switch case para cada operador
 switch (op){
   case '+': resultado = sum(x,y); break;
   case '-': resultado = subtract(x,y); break;

@@ -1,4 +1,4 @@
-#Testando programa com switch case
+#Testando programa com switchcase
 
 include <iostream>
 using namespace std;

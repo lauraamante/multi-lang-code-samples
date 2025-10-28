@@ -1,3 +1,4 @@
+// Programa de jogo de adivinhação - teste do srand()
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -5,16 +6,19 @@
 using namespace std;
 
 int main() {
-    srand(time(0)); // inicializa o gerador de números aleatórios
-    int numero_secreto = rand() % 100 + 1; // número aleatório entre 1 e 100
+    // inicializa o gerador de números aleatórios
+    srand(time(0)); 
+    
+    // número aleatório entre 1 e 100
+    int numero_secreto = rand() % 100 + 1;
     int tentativa;
     int tentativas = 0;
 
-    cout << "Bem-vindo ao Jogo de Adivinhação!" << endl;
+    cout << "|  Jogo de adivinhação  |" << endl;
     cout << "Tente adivinhar o número entre 1 e 100." << endl;
 
     do {
-        cout << "Digite sua tentativa: ";
+        cout << "Digite uma tentativa: ";
         cin >> tentativa;
         tentativas++;
 

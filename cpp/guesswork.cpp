@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 
-using namespace std;
+using namespace std;    
 
 int main() {
     // inicializa o gerador de números aleatórios

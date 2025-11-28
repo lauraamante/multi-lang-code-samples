@@ -7,7 +7,7 @@ class Fila:
 
     def esta_vazia(self):
         return len(self.items) == 0
-
+    
     def enfileirar(self, item):
         self.items.append(item)
         print(f"Elemento '{item}' adicionado à fila.")
@@ -38,7 +38,7 @@ def main():
         opcao = input("Escolha uma opção: ")
 
         if opcao == '1':
-            item = input("Digite o elemento: ")
+            item = input("Digite o elemento:\n ")
             fila.enfileirar(item)
         elif opcao == '2':
             fila.desenfileirar()

@@ -669,7 +669,7 @@ def criar_graficos_comparativos_teorico_pratico():
     bars4 = ax2.bar(x + width/2, pratico_pior_scaled, width,
                     label='Prático', color='#C73E1D', alpha=0.8)
 
-    ax2.set_title("📊 PIOR CASO (array ordenado)", fontsize=14, fontweight='bold', pad=10)
+    ax2.set_title("PIOR CASO (array ordenado)", fontsize=14, fontweight='bold', pad=10)
     ax2.set_xlabel('Tamanho (n)', fontweight='bold')
 
     # Definir label do eixo Y baseado na unidade
@@ -836,11 +836,9 @@ def demonstrar_quick_sort():
         return resultado
 
     resultado = quick_sort_explicado(arr.copy())
-    print(f"\n✅ Array ordenado final: {resultado}")
+    print(f"\n Array ordenado final: {resultado}")
 
-# =============================================================================
-# 4. 🚀 FUNÇÃO PRINCIPAL DE EXECUÇÃO
-# =============================================================================
+#FUNÇÃO PRINCIPAL DE EXECUÇÃO
 
 def executar_analise_completa():
     """Executa análise completa do Quick Sort"""
@@ -854,7 +852,7 @@ def executar_analise_completa():
     print("• Melhor caso: array balanceado (pivot sempre divide ao meio)")
     print("• Pior caso: array ordenado ascendente (pivot é último elemento)")
     print("• Caso aleatório: valores randômicos entre 1 e 100.000")
-    print("⚠️  AVISO: Para 50.000 elementos, o pior caso pode ser muito lento!")
+    print(" AVISO: Para 50.000 elementos, o pior caso pode ser muito lento!")
     print("          Usaremos valores teóricos/estimados para este caso.")
 
     # 1. Demonstração básica
@@ -869,7 +867,7 @@ def executar_analise_completa():
     try:
         resultados = tester.testar_desempenho(num_testes=1)  # Apenas 1 teste para ser mais rápido
     except Exception as e:
-        print(f"\n⚠️  Erro durante testes: {e}")
+        print(f"\n  Erro durante testes: {e}")
         print("Continuando com dados simulados para gráficos...")
         resultados = None
 
@@ -901,12 +899,10 @@ def executar_analise_completa():
 
     return tester
 
-# =============================================================================
-# 5. EXECUÇÃO PRINCIPAL
-# =============================================================================
+#MAIN
 
 if __name__ == "__main__":
-    print("🚀 INICIANDO ANÁLISE DO QUICK SORT...")
+    print(" INICIANDO ANÁLISE DO QUICK SORT...")
     print("Nota: Esta análise pode levar alguns segundos para completar.\n")
 
     # Verificar se as bibliotecas necessárias estão instaladas
@@ -931,22 +927,22 @@ if __name__ == "__main__":
 
         try:
             subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
-            print("✅ 'matplotlib' instalado com sucesso!")
+            print(" 'matplotlib' instalado com sucesso!")
         except:
-            print("⚠️  Não foi possível instalar 'matplotlib'")
+            print("Não foi possível instalar 'matplotlib'")
 
         try:
             subprocess.check_call([sys.executable, "-m", "pip", "install", "numpy"])
-            print("✅ 'numpy' instalado com sucesso!")
+            print(" 'numpy' instalado com sucesso!")
         except:
-            print("⚠️  Não foi possível instalar 'numpy'")
+            print("  Não foi possível instalar 'numpy'")
 
     # Executar análise completa
     try:
         tester = executar_analise_completa()
-        print("\n✨ Análise concluída com sucesso!")
+        print("\n Análise concluída com sucesso!")
     except Exception as e:
-        print(f"\n❌ Erro durante a execução: {e}")
+        print(f"\n Erro durante a execução: {e}")
         print("Tentando executar apenas as partes gráficas...")
 
         # Tentar executar pelo menos as partes gráficas
@@ -954,6 +950,6 @@ if __name__ == "__main__":
             criar_tabela_detalhada_quicksort()
             criar_grafico_comparativo_quicksort()
             criar_graficos_comparativos_teorico_pratico()
-            print("\n✅ Partes gráficas executadas com sucesso!")
+            print("\n Partes gráficas executadas com sucesso!")
         except Exception as e2:
-            print(f"\n❌ Erro nas partes gráficas: {e2}")
+            print(f"\n Erro nas partes gráficas: {e2}")

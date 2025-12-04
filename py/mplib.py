@@ -544,9 +544,7 @@ def criar_graficos_comparativos_teorico_pratico():
     """Cria gráficos comparativos entre valores teóricos e práticos do Quick Sort"""
     tamanhos = [1000, 3000, 10000, 50000]
 
-    # ================================
     # DADOS TEÓRICOS
-    # ================================
 
     # n log2 n para melhor/caso médio
     def nlogn(n):
@@ -556,9 +554,7 @@ def criar_graficos_comparativos_teorico_pratico():
     teorico_medio = [1.39 * nlogn(n) for n in tamanhos]  # Constante média do Quick Sort
     teorico_pior = [n*(n-1)/2 for n in tamanhos]
 
-    # ================================
     # DADOS PRÁTICOS (simulados) - AGORA COM 4 ELEMENTOS
-    # ================================
 
     # Melhor caso - próximo ao teórico
     pratico_melhor = [
@@ -592,9 +588,7 @@ def criar_graficos_comparativos_teorico_pratico():
     x = np.arange(len(tamanhos))
     width = 0.35
 
-    # ------------------------------------------------
-    # 1. MELHOR CASO
-    # ------------------------------------------------
+    # MELHOR CASO
     ax1 = axes[0, 0]
 
     bars1 = ax1.bar(x - width/2, teorico_melhor, width,
@@ -602,7 +596,7 @@ def criar_graficos_comparativos_teorico_pratico():
     bars2 = ax1.bar(x + width/2, pratico_melhor, width,
                     label='Prático', color='#A23B72', alpha=0.8)
 
-    ax1.set_title("📊 MELHOR CASO (array balanceado)", fontsize=14, fontweight='bold', pad=10)
+    ax1.set_title(" MELHOR CASO (array balanceado)", fontsize=14, fontweight='bold', pad=10)
     ax1.set_xlabel('Tamanho (n)', fontweight='bold')
     ax1.set_ylabel('Comparações', fontweight='bold')
     ax1.set_xticks(x)
@@ -734,7 +728,7 @@ def criar_graficos_comparativos_teorico_pratico():
     bars6 = ax3.bar(x + width/2, pratico_medio_scaled, width,
                     label='Prático', color='#98C1D9', alpha=0.8)
 
-    ax3.set_title("📊 CASO MÉDIO (array aleatório)", fontsize=14, fontweight='bold', pad=10)
+    ax3.set_title("CASO MÉDIO (array aleatório)", fontsize=14, fontweight='bold', pad=10)
     ax3.set_xlabel('Tamanho (n)', fontweight='bold')
 
     if unidades_medio[-1] == 'M':
@@ -846,7 +840,7 @@ def executar_analise_completa():
     print("ANÁLISE COMPLETA DO ALGORITMO QUICK SORT")
     print("="*120)
 
-    print("\n📋 CONFIGURAÇÃO DOS TESTES:")
+    print("\n CONFIGURAÇÃO DOS TESTES:")
     print("-"*120)
     print("• Tamanhos testados: 1.000, 3.000, 10.000, 50.000 elementos")
     print("• Melhor caso: array balanceado (pivot sempre divide ao meio)")
@@ -890,7 +884,7 @@ def executar_analise_completa():
     criar_graficos_comparativos_teorico_pratico()
 
     print("\n" + "="*120)
-    print("✅ ANÁLISE DO QUICK SORT CONCLUÍDA COM SUCESSO!")
+    print(" ANÁLISE DO QUICK SORT CONCLUÍDA COM SUCESSO!")
     print("="*120)
     print("\nArquivos gerados:")
     print("1. tabela_quicksort_detalhada.png - Tabela detalhada")

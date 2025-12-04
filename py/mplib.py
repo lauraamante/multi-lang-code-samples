@@ -13,9 +13,9 @@ import numpy as np
 from tabulate import tabulate
 import sys
 
-# =============================================================================
-# 1. 🔧 IMPLEMENTAÇÃO DO QUICK SORT COM CONTADORES
-# =============================================================================
+
+# IMPLEMENTAÇÃO DO QUICK SORT COM CONTADORES
+
 
 def quick_sort(arr):
     """

@@ -68,9 +68,7 @@ def quick_sort_com_contador(arr):
     resultado, contadores = _quick_sort_com_contador(arr.copy(), contadores)
     return resultado, contadores
 
-# =============================================================================
-# 2. 🧪 CLASSE TESTADORA DO QUICK SORT
-# =============================================================================
+# CLASSE TESTADORA DO QUICK SORT
 
 class QuickSortTester:
     def __init__(self):
@@ -158,7 +156,7 @@ class QuickSortTester:
         for tamanho in tamanhos:
             print(f"\n{' TESTANDO TAMANHO: ' + str(tamanho) + ' ELEMENTOS ':=^120}")
 
-            # ========== CASO ALEATÓRIO ==========
+            #CASO ALEATÓRIO 
             tempo_total = 0
             comparacoes_total = 0
             recursões_total = 0
@@ -203,13 +201,13 @@ class QuickSortTester:
             print(f"  • Comparações: {contadores_melhor['comparacoes']:>12,}")
             print(f"  • Tempo:       {end - start:>12.6f} segundos")
 
-            # ========== PIOR CASO ==========
+            #PIOR CASO 
             print("\nGerando pior caso...")
             arr_pior = self.gerar_pior_caso(tamanho)
 
             # Para 50000 elementos, o pior caso pode ser muito lento
             if tamanho == 50000:
-                print("  ⚠️  Atenção: Pior caso com 50.000 elementos pode demorar...")
+                print("  Atenção: Pior caso com 50.000 elementos pode demorar...")
                 # Podemos pular ou limitar o tempo
                 resultados['pior']['tempos'].append(0)  # Placeholder
                 resultados['pior']['comparacoes'].append(tamanho * (tamanho - 1) / 2)  # Valor teórico
@@ -298,9 +296,7 @@ class QuickSortTester:
 
         return self.teorico
 
-# =============================================================================
 # 3. 📊 FUNÇÕES PARA GERAR TABELAS E GRÁFICOS
-# =============================================================================
 
 def criar_tabela_detalhada_quicksort(tester=None):
     """Cria tabela detalhada com resultados do Quick Sort"""

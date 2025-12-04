@@ -296,7 +296,7 @@ class QuickSortTester:
 
         return self.teorico
 
-# 3. 📊 FUNÇÕES PARA GERAR TABELAS E GRÁFICOS
+# FUNÇÕES PARA GERAR TABELAS E GRÁFICOS
 
 def criar_tabela_detalhada_quicksort(tester=None):
     """Cria tabela detalhada com resultados do Quick Sort"""
@@ -538,7 +538,7 @@ def criar_grafico_comparativo_quicksort(tester=None):
     plt.savefig('grafico_quicksort_comparativo.png', dpi=300, bbox_inches='tight')
     plt.show()
 
-    print("✅ Gráfico comparativo salvo como 'grafico_quicksort_comparativo.png'")
+    print(" Gráfico comparativo salvo como 'grafico_quicksort_comparativo.png'")
 
 def criar_graficos_comparativos_teorico_pratico():
     """Cria gráficos comparativos entre valores teóricos e práticos do Quick Sort"""

@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""DAD 02 - EXTENSÃO - QUICK SORT
+""" QUICK SORT
 
 Análise experimental do algoritmo Quick Sort com testes de desempenho,
 gráficos comparativos e tabelas detalhadas.

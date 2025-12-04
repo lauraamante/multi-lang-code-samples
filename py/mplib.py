@@ -469,7 +469,7 @@ def criar_tabela_detalhada_quicksort(tester=None):
     plt.savefig('tabela_quicksort_detalhada.png', dpi=300, bbox_inches='tight', facecolor='white')
     plt.show()
 
-    print("✅ Tabela detalhada salva como 'tabela_quicksort_detalhada.png'")
+    print(" Tabela detalhada salva como 'tabela_quicksort_detalhada.png'")
 
 def criar_grafico_comparativo_quicksort(tester=None):
     """Cria gráfico comparativo dos tempos de execução do Quick Sort"""
@@ -781,7 +781,7 @@ def criar_graficos_comparativos_teorico_pratico():
     ax4.plot(x, erro_medio, 's-', label='Caso Médio', color='#3D5A80', linewidth=2, markersize=8)
     ax4.plot(x, erro_pior, '^-', label='Pior Caso', color='#C73E1D', linewidth=2, markersize=8)
 
-    ax4.set_title("📈 ERRO RELATIVO (%)", fontsize=14, fontweight='bold', pad=10)
+    ax4.set_title("ERRO RELATIVO (%)", fontsize=14, fontweight='bold', pad=10)
     ax4.set_xlabel('Tamanho (n)', fontweight='bold')
     ax4.set_ylabel('Erro Relativo (%)', fontweight='bold')
     ax4.set_xticks(x)
@@ -799,7 +799,7 @@ def criar_graficos_comparativos_teorico_pratico():
     plt.savefig('comparacao_teorico_pratico_quicksort.png', dpi=300, bbox_inches='tight')
     plt.show()
 
-    print("✅ Gráfico comparativo teórico-prático salvo como 'comparacao_teorico_pratico_quicksort.png'")
+    print("Gráfico comparativo teórico-prático salvo como 'comparacao_teorico_pratico_quicksort.png'")
 
 def demonstrar_quick_sort():
     """Demonstra o funcionamento do Quick Sort"""

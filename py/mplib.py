@@ -8,13 +8,12 @@ import time
 import random
 import matplotlib.pyplot as plt
 from matplotlib.table import Table
-import numpy as np
+import numpy as np    
 from tabulate import tabulate
 import sys
 
 
 # IMPLEMENTAÇÃO DO QUICK SORT COM CONTADORES
-
 
 def quick_sort(arr):
     """
